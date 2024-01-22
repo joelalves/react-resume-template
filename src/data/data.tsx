@@ -11,9 +11,8 @@ import {
 import GithubIcon from '../components/Icon/GithubIcon';
 import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
-import heroImage from '../images/header-background.webp';
+import heroImage from '../images/windows.jpg';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
@@ -25,7 +24,7 @@ import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
 import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
 import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
 import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
-import profilepic from '../images/profilepic.jpg';
+import profilepic from '../images/joel.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
   About,
@@ -69,24 +68,23 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `I'm Joel Alves.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I'm a Valença do Minho based <strong className="text-stone-100">Automotive cybersecurity</strong>, currently working
+        at <strong className="text-stone-100">CTAG - Centre Technologique de l'Automobile de Galice</strong> helping teams create a strong software.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        In my free time time, you can catch me training <strong className="text-stone-100">Padel</strong>,
+        riding my <strong className="text-stone-100">bike's</strong>, or exploring beautiful{' '}
+        <strong className="text-stone-100">Places</strong>.
       </p>
     </>
   ),
   actions: [
     {
-      href: '/assets/resume.pdf',
+      href: '/assets/Profile.pdf',
       text: 'Resume',
       primary: true,
       Icon: ArrowDownTrayIcon,
@@ -104,16 +102,14 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `I am a motivated and dedicated professional, graduated in Computer Engineering and studying a master in cybersecurity, with a solid foundation in computer science and software engineering. Throughout my training, I acquired advanced skills in programming, systems analysis and technological problem solving. With a proactive and results-oriented approach, I constantly seek challenges that allow me to creatively apply my knowledge to innovative solutions. I am passionate about technology and committed to contributing to the industry's progress by combining my academic background with an entrepreneurial mindset and solid interpersonal skills. With a solid work ethic and the ability to learn quickly, I look forward to taking on new challenges and contributing to success in a dynamic environment.`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'Valença do Minho, PT', Icon: MapIcon},
+    {label: 'Age', text: '35', Icon: CalendarIcon},
+    {label: 'Nationality', text: 'Portuguese', Icon: FlagIcon},
+    {label: 'Interests', text: 'Padel, Bikes, Places', Icon: SparklesIcon},
+    {label: 'Study', text: 'Instituto Politécnico de Viana do Castelo', Icon: AcademicCapIcon},
+    {label: 'Employment', text: 'CTAG', Icon: BuildingOffice2Icon},
   ],
 };
 
@@ -125,16 +121,16 @@ export const skills: SkillGroup[] = [
     name: 'Spoken languages',
     skills: [
       {
-        name: 'English',
+        name: 'Portuguese',
         level: 10,
       },
       {
-        name: 'French',
-        level: 4,
+        name: 'Spanish',
+        level: 8,
       },
       {
-        name: 'Spanish',
-        level: 3,
+        name: 'English',
+        level: 6,
       },
     ],
   },
@@ -142,7 +138,7 @@ export const skills: SkillGroup[] = [
     name: 'Frontend development',
     skills: [
       {
-        name: 'React',
+        name: 'Angular',
         level: 9,
       },
       {
@@ -150,8 +146,8 @@ export const skills: SkillGroup[] = [
         level: 7,
       },
       {
-        name: 'GraphQL',
-        level: 6,
+        name: 'React',
+        level: 3,
       },
     ],
   },
@@ -163,29 +159,29 @@ export const skills: SkillGroup[] = [
         level: 8,
       },
       {
-        name: 'Rust',
-        level: 5,
+        name: 'AWS',
+        level: 6,
       },
       {
-        name: 'Golang',
-        level: 4,
-      },
+        name: 'Docker',
+        level: 5,
+      }
     ],
   },
   {
-    name: 'Mobile development',
+    name: 'Cybersecurity',
     skills: [
       {
-        name: 'React Native',
-        level: 9,
+        name: 'Vulnerability Management',
+        level: 7,
       },
       {
-        name: 'Flutter',
-        level: 4,
+        name: 'Common Criteria',
+        level: 5,
       },
       {
-        name: 'Swift',
-        level: 3,
+        name: 'Verification and Validation (V&V)',
+        level: 5,
       },
     ],
   },
@@ -268,39 +264,93 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'October 2022 - Present',
+    location: 'Instituto Politécnico de Viana do Castelo',
+    title: 'Masters in CyberSecurity',
+    content: <p>The Master in Cybersecurity has as its main objective the advanced training of specialists in network, systems and information security;</p>,
   },
   {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
-  },
+    date: 'Setember 2011 - Setember 2014',
+    location: 'Instituto Superior de Engenharia do Porto',
+    title: 'Degree in Informatics Enginnering',
+    content: <p>During the program, I acquired advanced knowledge in programming languages, operating systems, computer networks, algorithms, artificial intelligence and software development.</p>,
+  },{
+    date: 'Setember 2009 - Setember 2011',
+    location: 'Instituto Politécnico de Viana do Castelo',
+    title: 'Technical Course Development in Multimedia Products',
+    content: <p>Systems Projects and Multimedia Production, 2D and 3D Multimedia Systems, Application Programming.</p>,
+  }
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'June 2022 - Present',
+    location: 'CTAG',
+    title: 'Automotive cybersecurity',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        Common Criteria, Implement ISO, Implements solutions for web applications and validate the same applications.
       </p>
     ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'November 2018 - June 2022',
+    location: 'WIT - Software',
+    title: 'Software Engineer',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+      - Front-End:
+        Angular, TypeScript, CSS3, SAML2.0(WebSSO), GIT, Scrum, Local Storage, Session Storage, Jekings <br></br>
+      - Backend:
+        AWS Cloud, Serverless, Redis, NodeJS, NPM, TypeScript, JavaScript, ObjectionJS, Postgres SQL, Twitter API, GIT, Scrum, Jtests(UnitTest), Jekings
+      </p>
+    ),
+  },{
+    date: 'April 2017 - October 2018',
+    location: 'CEiiA',
+    title: 'Front-End Web Developer',
+    content: (
+      <p>
+        PHP, Laravel(5.1), Html5, JavaScript, CSS3, AJAX, Node js,webpack, Gulp, GIT, Scrum, Jira
+      </p>
+    ),
+  },{
+    date: 'January 2016 - April 2017',
+    location: 'Nonius Software',
+    title: 'Software Engineer(Full Stack)',
+    content: (
+      <p>
+        PHP, Html5, Java, CSS3, AJAX, JavaScript, SVN, MYSQL, MongoDB FFMPEG
+      </p>
+    ),
+  },{
+    date: 'October 2014 - July 2015',
+    location: 'WebComum',
+    title: 'Web Developer(Full Stack)',
+    content: (
+      <p>
+        PHP, YII, Html5, CSS, AJAX, MYSQL, FFMPEG, SEO, GI, FFMPEG, SCRUM
+      </p>
+    ),
+  },{
+    date: 'February 2014 - October 2014',
+    location: 'Manemac',
+    title: 'Python & Web Developer(Full Stack)',
+    content: (
+      <p>
+        Web Developer (Django, Jquery, Html5, CSS, AJAX, MYSQL)
+      </p>
+    ),
+  },{
+    date: 'October 2010 - October 2011',
+    location: 'Town Hall of Valença do Minho',
+    title: 'Multimedia Product Development Technician (Internship)',
+    content: (
+      <p>
+        - Creating images (banners)
+        - Dynamization of the video gallery. 
+        - 3D of the future Railway Museum
+        - Site for the Hostel of São Teotónio
       </p>
     ),
   },
@@ -311,7 +361,8 @@ export const experience: TimelineItem[] = [
  */
 export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
-  testimonials: [
+  testimonials: []
+    /*testimonials: [
     {
       name: 'John Doe',
       text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
@@ -327,7 +378,7 @@ export const testimonial: TestimonialSection = {
       text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
       image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
     },
-  ],
+  ],*/
 };
 
 /**
@@ -336,27 +387,27 @@ export const testimonial: TestimonialSection = {
 
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  description: '',
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'joel.17.alves@gmail.com',
+      href: 'mailto:joel.17.alves@gmail.com',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
+      text: 'Valença do Minho, Portugal',
+      href: 'https://www.google.pt/maps/place/Valen%C3%A7a/@42.030144,-8.6616781,14z/data=!3m1!4b1!4m6!3m5!1s0xd259a8a73810093:0x984ac8b0e4342c92!8m2!3d42.0268751!4d-8.6421522!16zL20vMGJ2NGtz?entry=ttu',
     },
     {
       type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      text: '@joeldalves',
+      href: 'https://www.instagram.com/joeldalves/',
     },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'joelalves',
+      href: 'https://github.com/joelalves',
     },
   ],
 };
@@ -365,9 +416,8 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/joelalves'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/joel-dinis-pereira-alves-a4759334/'},
+  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/joeldalves/'},
+  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/JoelAlves5'},
 ];
