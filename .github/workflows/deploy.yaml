@@ -79,7 +79,23 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
 
       - name: View Folders
-        run: ls 
+        run: ls
+        
+      - name: Pushes to another repository
+        id: push_directory
+        uses: cpina/github-action-push-to-another-repository@target-branch
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: public
+          destination-github-username: 'joelalves'
+          destination-repository-name: 'joelalves.github.io.git'
+          user-email: joel.17.alves@gmail.com
+          commit-message: See ORIGIN_COMMIT from $GITHUB_REF
+          target-branch: main
+
+      - name: Test get variable exported by push-to-another-repository
+        run: echo $DESTINATION_CLONED_DIRECTORY
 
       - name: deploy changes to a repo
         uses: tagus/git-deploy@v0.5.0
