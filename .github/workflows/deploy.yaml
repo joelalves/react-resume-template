@@ -79,7 +79,7 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
 
       - name: View Folders
-        run: ls
+        run: ls -la
         
       - name: Pushes to another repository
         id: push_directory
@@ -87,7 +87,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.ACCESS_TOKEN }}
         with:
-          source-directory: public
+          source-directory: .next/*
           destination-github-username: 'joelalves'
           destination-repository-name: 'joelalves.github.io'
           user-email: joel.17.alves@gmail.com
