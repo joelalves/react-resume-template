@@ -78,10 +78,11 @@ jobs:
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
         
-      - name: Put current date into a variable
-        run: |
-          $NOW=& Get-Date -format yyyy-MM-dd
-          echo "NOW=$NOW" >> $env:GITHUB_ENV
+      - name: Test1
+        id: t1
+        uses: Kaven-Universe/github-action-current-date-time@v1
+        with:
+          format: "yyyy-MM-dd"
 
       - name: Pushes to another repository
         id: push_directory
@@ -93,5 +94,5 @@ jobs:
           destination-github-username: 'joelalves'
           destination-repository-name: 'joelalves.github.io'
           user-email: joel.17.alves@gmail.com
-          commit-message: new deploy ${{ env.NOW }}
+          commit-message: new deploy ${{ steps.t1.outputs.year }}-${{ steps.t1.outputs.month }}-${{ steps.t1.outputs.day }}  ${{ steps.t1.outputs.hours }}:${{ steps.t1.outputs.minutes }}
           target-branch: main
