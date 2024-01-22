@@ -89,7 +89,7 @@ jobs:
         with:
           source-directory: public
           destination-github-username: 'joelalves'
-          destination-repository-name: 'joelalves.github.io.git'
+          destination-repository-name: 'joelalves.github.io'
           user-email: joel.17.alves@gmail.com
           commit-message: See ORIGIN_COMMIT from $GITHUB_REF
           target-branch: main
