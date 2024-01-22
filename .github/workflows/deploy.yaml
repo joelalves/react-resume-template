@@ -77,19 +77,21 @@ jobs:
 
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
-
-      - name: View Folders
-        run: ls -la
         
+      - name: Put current date into a variable
+        run: |
+          $NOW=& Get-Date -format yyyy-MM-dd
+          echo "NOW=$NOW" >> $env:GITHUB_ENV
+
       - name: Pushes to another repository
         id: push_directory
         uses: cpina/github-action-push-to-another-repository@target-branch
         env:
           API_TOKEN_GITHUB: ${{ secrets.ACCESS_TOKEN }}
         with:
-          source-directory: .out
+          source-directory: out
           destination-github-username: 'joelalves'
           destination-repository-name: 'joelalves.github.io'
           user-email: joel.17.alves@gmail.com
-          commit-message: new deploy ${{ steps.date.outputs.date }}
+          commit-message: new deploy ${{ env.NOW }}
           target-branch: main
