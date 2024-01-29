@@ -64,6 +64,7 @@ jobs:
           source-directory: out
           destination-github-username: 'joelalves'
           destination-repository-name: 'joelalves.github.io'
+          #destination-repository-name: 'cv-in-react'
           user-email: joel.17.alves@gmail.com
           commit-message: new deploy ${{ steps.t1.outputs.year }}-${{ steps.t1.outputs.month }}-${{ steps.t1.outputs.day }}  ${{ steps.t1.outputs.hours }}:${{ steps.t1.outputs.minutes }}
           target-branch: main
