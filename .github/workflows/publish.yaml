@@ -20,52 +20,47 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
-
+      
       - name: Setup Node.js ⚙️
         uses: actions/setup-node@v4
         with:
           node-version: 20
-      
-      - name: Restore cache
-        uses: actions/cache@v4
+  
+      - name: Cache dependencies ⚡
+        id: cache_dependencies
+        uses: actions/cache@v3
         with:
-          path: |
-            .next/cache
-          # Generate a new cache whenever packages or source files change.
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
-          # If source files changed but packages didn't, rebuild from a prior cache.
-          restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
+          path: node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
+  
+      - name: Install dependencies 🔧
+        shell: bash
+        if: steps.cache_dependencies.outputs.cache-hit != 'true'
+        run: npm ci
 
       - name: Setup Pages ⚙️
         uses: actions/configure-pages@v4
         with:
           static_site_generator: next
 
-      - name: Build with Next.js 🏗️
-        run: npx next build
-
-      - name: Get Time and Date
-        id: t1
-        uses: Kaven-Universe/github-action-current-date-time@v1
+      - name: Upload artifact 📡
+        uses: actions/upload-pages-artifact@v3
         with:
-          format: "yyyy-MM-dd"
+          path: ./out
+  
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
-      - name: Pushes to another repository
-        id: push_directory
-        uses: cpina/github-action-push-to-another-repository@target-branch
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.ACCESS_TOKEN }}
-        with:
-          source-directory: out
-          destination-github-username: 'joelalves'
-          destination-repository-name: 'joelalves.github.io'
-          #destination-repository-name: 'cv-in-react'
-          user-email: joel.17.alves@gmail.com
-          commit-message: new deploy ${{ steps.t1.outputs.year }}-${{ steps.t1.outputs.month }}-${{ steps.t1.outputs.day }}  ${{ steps.t1.outputs.hours }}:${{ steps.t1.outputs.minutes }}
-          target-branch: main
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Publish to GitHub Pages 🚀
+        id: deployment
+        uses: actions/deploy-pages@v4
 

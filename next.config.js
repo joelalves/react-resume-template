@@ -2,7 +2,7 @@
 
 // https://github.com/vercel/next.js/blob/master/packages/next/next-server/server/config.ts
 const nextConfig = {
-  basePath: "/cv-in-react",
+  basePath: "/react-resume-template",
   output: 'export',
   webpack: config => {
     const oneOfRule = config.module.rules.find(rule => rule.oneOf);
@@ -25,9 +25,6 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   trailingSlash: false,
-  experimental: {
-    appDir: true,
-  },
   images: {
     unoptimized: true,
     remotePatterns: [
