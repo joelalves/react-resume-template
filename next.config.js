@@ -25,6 +25,9 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   trailingSlash: false,
+  experimental: {
+    appDir: true,
+  },
   images: {
     unoptimized: true,
     remotePatterns: [
