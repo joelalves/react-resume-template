@@ -80,3 +80,22 @@ jobs:
 
       - name: Build with NPM
         run: npm run build
+      
+      - name: Get Time and Date
+        id: t1
+        uses: Kaven-Universe/github-action-current-date-time@v1
+        with:
+          format: "yyyy-MM-dd"
+
+      - name: Pushes to another repository
+        id: push_directory
+        uses: cpina/github-action-push-to-another-repository@target-branch
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.ACCESS_TOKEN }}
+        with:
+          source-directory: out
+          destination-github-username: 'joelalves'
+          destination-repository-name: 'joelalves.github.io'
+          user-email: joel.17.alves@gmail.com
+          commit-message: new deploy ${{ steps.t1.outputs.year }}-${{ steps.t1.outputs.month }}-${{ steps.t1.outputs.day }}  ${{ steps.t1.outputs.hours }}:${{ steps.t1.outputs.minutes }}
+          target-branch: main
