@@ -23,9 +23,9 @@ const Portfolio: FC = memo(() => {
         </div>
       </div>
     </Section> */
-  '');
+    ''
+  );
 });
 
 Portfolio.displayName = 'Portfolio';
 export default Portfolio;
-

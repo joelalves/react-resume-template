@@ -1,11 +1,7 @@
 import {FC, memo} from 'react';
 
-
 const ContactForm: FC = memo(() => {
-
-  return (
-    ''
-  );
+  return '';
 });
 
 ContactForm.displayName = 'ContactForm';

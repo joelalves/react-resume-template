@@ -72,12 +72,13 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Valença do Minho based <strong className="text-stone-100">Automotive cybersecurity</strong>, currently working
-        at <strong className="text-stone-100">CTAG - Centre Technologique de l'Automobile de Galice</strong> helping teams create a strong software.
+        I'm a Valença do Minho based <strong className="text-stone-100">Automotive cybersecurity</strong>, currently
+        working at <strong className="text-stone-100">CTAG - Centre Technologique de l'Automobile de Galice</strong>{' '}
+        helping teams create a strong software.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training <strong className="text-stone-100">Padel</strong>,
-        riding my <strong className="text-stone-100">bike's</strong>, or exploring beautiful{' '}
+        In my free time time, you can catch me training <strong className="text-stone-100">Padel</strong>, riding my{' '}
+        <strong className="text-stone-100">bike's</strong>, or exploring beautiful{' '}
         <strong className="text-stone-100">Places</strong>.
       </p>
     </>
@@ -165,7 +166,7 @@ export const skills: SkillGroup[] = [
       {
         name: 'Docker',
         level: 5,
-      }
+      },
     ],
   },
   {
@@ -267,19 +268,30 @@ export const education: TimelineItem[] = [
     date: 'October 2022 - Present',
     location: 'Instituto Politécnico de Viana do Castelo',
     title: 'Masters in CyberSecurity',
-    content: <p>The Master in Cybersecurity has as its main objective the advanced training of specialists in network, systems and information security;</p>,
+    content: (
+      <p>
+        The Master in Cybersecurity has as its main objective the advanced training of specialists in network, systems
+        and information security;
+      </p>
+    ),
   },
   {
     date: 'Setember 2011 - Setember 2014',
     location: 'Instituto Superior de Engenharia do Porto',
     title: 'Degree in Informatics Enginnering',
-    content: <p>During the program, I acquired advanced knowledge in programming languages, operating systems, computer networks, algorithms, artificial intelligence and software development.</p>,
-  },{
+    content: (
+      <p>
+        During the program, I acquired advanced knowledge in programming languages, operating systems, computer
+        networks, algorithms, artificial intelligence and software development.
+      </p>
+    ),
+  },
+  {
     date: 'Setember 2009 - Setember 2011',
     location: 'Instituto Politécnico de Viana do Castelo',
     title: 'Technical Course Development in Multimedia Products',
     content: <p>Systems Projects and Multimedia Production, 2D and 3D Multimedia Systems, Application Programming.</p>,
-  }
+  },
 ];
 
 export const experience: TimelineItem[] = [
@@ -299,58 +311,44 @@ export const experience: TimelineItem[] = [
     title: 'Software Engineer',
     content: (
       <p>
-      - Front-End:
-        Angular, TypeScript, CSS3, SAML2.0(WebSSO), GIT, Scrum, Local Storage, Session Storage, Jekings <br></br>
-      - Backend:
-        AWS Cloud, Serverless, Redis, NodeJS, NPM, TypeScript, JavaScript, ObjectionJS, Postgres SQL, Twitter API, GIT, Scrum, Jtests(UnitTest), Jekings
+        - Front-End: Angular, TypeScript, CSS3, SAML2.0(WebSSO), GIT, Scrum, Local Storage, Session Storage, Jekings{' '}
+        <br></br>- Backend: AWS Cloud, Serverless, Redis, NodeJS, NPM, TypeScript, JavaScript, ObjectionJS, Postgres
+        SQL, Twitter API, GIT, Scrum, Jtests(UnitTest), Jekings
       </p>
     ),
-  },{
+  },
+  {
     date: 'April 2017 - October 2018',
     location: 'CEiiA',
     title: 'Front-End Web Developer',
-    content: (
-      <p>
-        PHP, Laravel(5.1), Html5, JavaScript, CSS3, AJAX, Node js,webpack, Gulp, GIT, Scrum, Jira
-      </p>
-    ),
-  },{
+    content: <p>PHP, Laravel(5.1), Html5, JavaScript, CSS3, AJAX, Node js,webpack, Gulp, GIT, Scrum, Jira</p>,
+  },
+  {
     date: 'January 2016 - April 2017',
     location: 'Nonius Software',
     title: 'Software Engineer(Full Stack)',
-    content: (
-      <p>
-        PHP, Html5, Java, CSS3, AJAX, JavaScript, SVN, MYSQL, MongoDB FFMPEG
-      </p>
-    ),
-  },{
+    content: <p>PHP, Html5, Java, CSS3, AJAX, JavaScript, SVN, MYSQL, MongoDB FFMPEG</p>,
+  },
+  {
     date: 'October 2014 - July 2015',
     location: 'WebComum',
     title: 'Web Developer(Full Stack)',
-    content: (
-      <p>
-        PHP, YII, Html5, CSS, AJAX, MYSQL, FFMPEG, SEO, GI, FFMPEG, SCRUM
-      </p>
-    ),
-  },{
+    content: <p>PHP, YII, Html5, CSS, AJAX, MYSQL, FFMPEG, SEO, GI, FFMPEG, SCRUM</p>,
+  },
+  {
     date: 'February 2014 - October 2014',
     location: 'Manemac',
     title: 'Python & Web Developer(Full Stack)',
-    content: (
-      <p>
-        Web Developer (Django, Jquery, Html5, CSS, AJAX, MYSQL)
-      </p>
-    ),
-  },{
+    content: <p>Web Developer (Django, Jquery, Html5, CSS, AJAX, MYSQL)</p>,
+  },
+  {
     date: 'October 2010 - October 2011',
     location: 'Town Hall of Valença do Minho',
     title: 'Multimedia Product Development Technician (Internship)',
     content: (
       <p>
-        - Creating images (banners)
-        - Dynamization of the video gallery. 
-        - 3D of the future Railway Museum
-        - Site for the Hostel of São Teotónio
+        - Creating images (banners) - Dynamization of the video gallery. - 3D of the future Railway Museum - Site for
+        the Hostel of São Teotónio
       </p>
     ),
   },
@@ -361,8 +359,8 @@ export const experience: TimelineItem[] = [
  */
 export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
-  testimonials: []
-    /*testimonials: [
+  testimonials: [],
+  /*testimonials: [
     {
       name: 'John Doe',
       text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
