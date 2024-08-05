@@ -62,7 +62,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: https://joelalves.github.io/cv/
+      url: https://joelalves.github.io/
 
     runs-on: ubuntu-latest
     needs: build

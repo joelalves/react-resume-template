@@ -1,6 +1,6 @@
 /* eslint-env node */
 module.exports = {
-  siteUrl: 'joelalves.github.io ',
+  siteUrl: 'joel-cv.vercel.app',
   exclude: ['/404*', '/500*'],
   transform: async (config, path) => {
     return {
