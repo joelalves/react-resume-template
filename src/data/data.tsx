@@ -84,7 +84,7 @@ export const heroData: Hero = {
   ),
   actions: [
     {
-      href: '/react-resume-template/assets/Profile.pdf',
+      href: '/cv/assets/Profile.pdf',
       text: 'Resume',
       primary: true,
       Icon: ArrowDownTrayIcon,
